@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listphukien</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="header">
+        <div class="grid">
+        <div class="header-main">
+            <div class="header__logo hide-on-mobile-tablet">
+                <img  class="header__logo-img" src="img/logo.png" width="150px"/>
+            
+             </div>
+          <div class="header__navbar hide-on-mobile-tablet">
+              <ul class="header__navbar-list ">
+                <li class="header__navbar-item"><a href="index.html">TRANG CHỦ</a></li>
+                <li class="header__navbar-item"><a href="listsanpham.html">SẢN PHẨM</a></li>
+                <li class="header__navbar-item"><a href="listphukien.html">PHỤ KIỆN</a></li>
+                <li class="header__navbar-item"><a href="me.html">VỀ TÔI</a></li>
+              </ul>
+           </div> 
+
+           <label for="nav-mobile-input" class="nav__bars-btn">
+            <img src="img/menu.png" alt="">
+           </label>
+           <input  type="checkbox" hidden name=""class="nav__input" id="nav-mobile-input"></input>
+    
+           <label for="nav-mobile-input" class="nav__overlay">
+            <div class="header__navbar-mobile">
+               <label for="nav-mobile-input" class="nav__mobile-close">
+                <img src="img/close.png" alt="">
+            
+               </label>
+              <ul class="header__navbar-mobile-list ">
+                <li class="header__navbar-mobile-item"><a href="index.html">TRANG CHỦ</a></li>
+                <li class="header__navbar-mobile-item"><a href="listsanpham.html">SẢN PHẨM</a></li>
+                <li class="header__navbar-mobile-item"><a href="listphukien.html">PHỤ KIỆN</a></li>
+                <li class="header__navbar-mobile-item"><a href="me.html">VỀ TÔI</a></li>
+              </ul>
+           </div>
+
+           </label>
+           <div class="header__khoangtrang">
+
+           </div>
+            <div class="header__search ">
+                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                <button class="header__search-btn">
+                    <span class="material-symbols-outlined">
+                        search
+                        </span>
+
+                </button>
+
+
+            </div>
+            <div class="header__cart">
+                <div class="header__cart-dangky"><a href="register.html">
+                    <span class="material-symbols-outlined">
+                    person
+                    </span></a>
+                    
+                </div>
+                <div class="header__cart-gioihang">
+                    <a href="gioihang.html">
+                    <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span></a>
+                </div>
+              
+            </div>
+            
+        </div> 
+    </div>
+        
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="container1">
+                <div class="grid__row app__sp">
+                    <div class="grid__column-10">
+                        <div class="home-product">
+                            <h1 class="tieude">PHỤ KIỆN</h1>
+                            <div class="grid__row">
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk1.html">
+                                        <div class="home-product-item__img" style="background-image:url(data:image/jpeg;base64,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)"></div>
+                                        <h4 class="home-product-item__name">Dây giày thể thao bản dẹp</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">15.000d</span>
+                                            <span class="home-product-item__price-new">10.500d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/> 
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk2.html">
+                                        <div class="home-product-item__img" style="background-image:url(https://img.mwc.com.vn/giay-thoi-trang?w=640&h=640&FileInput=//Upload/2022/02/z3215035913919-3d1e0a2a97c7e0208089d32f52f14c3a.jpg)"></div>
+                                        <h4 class="home-product-item__name">Dây giày thể thao bản tròn</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">16.000d</span>
+                                            <span class="home-product-item__price-new">11.200d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/> 
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk3.html">
+                                        <div class="home-product-item__img" style="background-image:url(img/pk7.jpg)"></div>
+                                        <h4 class="home-product-item__name">Chai vệ sinh giày dép</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">20.000d</span>
+                                            <span class="home-product-item__price-new">14.000d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/> 
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk4.html">
+                                        <div class="home-product-item__img" style="background-image:url(https://bizweb.dktcdn.net/100/294/379/products/116877691-3848798855136160-2182785303321349992-o.jpg?v=1596973383917)"></div>
+                                        <h4 class="home-product-item__name">Tất Nike cao cổ nam nữ </h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">25.000d</span>
+                                            <span class="home-product-item__price-new">17.500d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>                                    
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk5.html">
+                                        <div class="home-product-item__img" style="background-image:url(img/pk10.jpg)"></div>
+                                        <h4 class="home-product-item__name">Tất bèo nữ cổ cao phong cách vintage hàn quốc vớ bèo nữ cổ cao đơn giản nhiều màu </h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">20.000d</span>
+                                            <span class="home-product-item__price-new">14.000d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>                                    
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk6.html">
+                                        <div class="home-product-item__img" style="background-image:url(img/pk14.jpg)"></div>
+                                        <h4 class="home-product-item__name">Tất Nike cổ ngắn  </h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">12.000d</span>
+                                            <span class="home-product-item__price-new">8.400d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>                                    
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk7.html">
+                                        <div class="home-product-item__img" style="background-image:url(img/pk16.jpg)"></div>
+                                        <h4 class="home-product-item__name">Sét 5 Đôi Tất Nữ Cổ Cao Màu Trắng Phong Cách Hàn Siêu Hot </h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">45.000d</span>
+                                            <span class="home-product-item__price-new">31.500d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>                                    
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+                                <div class="grid__column-2-4">
+                                    <a class="home-product-item" href="pk9.html">
+                                        <div class="home-product-item__img" style="background-image:url(img/pk20.jpg)"></div>
+                                        <h4 class="home-product-item__name">Dây giày  bản dẹp đủ màu </h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">13.000d</span>
+                                            <span class="home-product-item__price-new">9.100d</span>
+                                        </div>
+                                        <div class="home-product-item__star">
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>
+                                            <img src="img/star.png"/>                                    
+
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-precent">30%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="grid__column-2">
+                        <div class="home-new">
+                            <h1 class="tieude">TIN TỨC MỚI</h1>
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/dai-hoc-luat-ha-noi-cong-bo-diem-chuan-hoc-ba-2023-nganh-cao-nhat-vuot-nguong-30-diem-post1537611.tpo" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/300x180/Uploaded/2023/ttf-ztmfxuzt/2023_05_26/collage-2428.png);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Đại học Luật Hà Nội công bố điểm chuẩn học bạ 2023:Ngành cao nhất vượt ngưỡng 30 điểm</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">27/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/ra-quan-chien-dich-thanh-nien-tinh-nguyen-he-2023-noi-thanh-nien-duoc-cong-hien-va-truong-thanh-post1537882.tpo" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/350x210/Uploaded/2023/ttf-ztmfxuzt/2023_05_27/133296443265235592-z4381175981926-f2d37f706c97415545c821491eb0672b-4941.jpg);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">11 chỉ tiêu quan trọng của chiến dịch Thanh niên tình nguyện Hè năm 2023</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">28/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/tung-bung-ngay-hoi-hs-sv-doi-moi-sang-tao-nghien-cuu-khoa-hoc-khoi-nghiep-nam-2023-post1536369.tpo?utm_source=dable" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://images.dable.io/thumbnail/photo-cms-tpo.epicdn.me/300X188/169/6c7f7a85314802949e8e623c8fd6fcd7a47af.webp);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Tưng bừng Ngày hội HS-SV Đổi mới sáng tạo,Nghiên cứu khoa học,Khởi nghiệp năm 2023</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">27/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/duong-len-dinh-olympia-23-nam-sinh-dak-nong-vao-vong-trong-nho-so-diem-nhi-cao-nhat-post1536217.tpo" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/200x120/Uploaded/2023/qqc-lce22/2023_05_21/z4363874131271-62b51d8fded1dfb4deb7717761ae564e-5853.jpg);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Đường Lên Đỉnh Olympia 23: Nam sinh Đắk Nông vào vòng trong nhờ số điểm Nhì cao nhất</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">21/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="grid__column">
+                                <a href="https://thanhnien.vn/truong-dai-hoc-rmit-ra-mat-nganh-cu-nhan-ke-toan-chuan-quoc-te-185230517142817036.htm" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://images2.thanhnien.vn/528068263637045248/2023/5/25/rmit-16850001746541628751486.jpg);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Trường đại học RMIT ra mắt ngành cử nhân Kế Toán chuẩn quốc tê</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">27/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+    
+                            </div>>
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/700x420/Uploaded/2023/ttf-ztmfxuzt/2023_05_27/133296481987054704-z4381083832756-6bd442588b08574f89f3785027383fe0-5189.jpg);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Ra quân chiến dịch Thanh niên tình nguyện Hè 2023:Nơi thanh niên được cống hiến và trưởng thành</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">27/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+    
+                            </div>
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/ngay-thi-dau-tien-vao-lop-10-truong-pho-thong-nang-khieu-si-tu-tho-phao-vi-de-vua-suc-post1537712.tpo" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/350x210/Uploaded/2023/qqc-lce22/2023_05_26/thiet-ke-chua-co-ten-6-5753.png);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Ngày thi đầu tiên vào lớp 10 trường phổ thông Năng khiếu :Sĩ tử thở phào vì đề với sức </h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">25/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+    
+                            </div>
+                            <div class="grid__column">
+                                <a href="https://hoahoctro.tienphong.vn/mon-kem-dat-ky-luc-guinness-dat-nhat-the-gioi-khien-ai-cung-muon-nem-thu-post1537776.tpo" class="home-new-item">
+                                    <div class="home-new-item__main">
+                                        <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/300x180/Uploaded/2023/vvh-buimsbhfiq/2023_05_27/thiet-ke-chua-co-ten-1-8488.png);"></div>
+                                        <div class="home-new-item__nd">
+                                            <h5 class="home-new-item__name">Món kem đạt kỷ lục Guinness đắt nhất thế giới khiến ai cũng muốn nếm thử</h5>
+                                        <div class="home-new-item__time">
+                                            <img  src="img/alarm.png"/>
+                                            <div class="home-new-item__time-date">22/05/2023</div>
+                                            
+                                            
+                                        </div>
+                                        </div>
+                                        
+                
+                                    </div>
+                                </a>
+    
+                            </div>
+                            
+
+
+
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+
+            </div>
+            <div class="container3">
+                <div class="guarantee-product">
+                <div class="grid-row">
+                    <div class="guarantee-product-list">
+                        <div class="guarantee-product-item">
+                            <img src="img/camket.png"/>
+                            <h3>CAM KẾT CHÍNH HÃNG</h3>
+                            <h4>100% Authentic</h4>
+                            <p>Cam kết sản phẩm chính hãng tư Châu Âu ,Châu Mỹ</p>
+                        </div>
+                        <div class="guarantee-product-item">
+                            <img src="img/vanchuyen.png" alt="">
+                            <h3>GIAO HÀNG HỎA TỐC</h3>
+                            <h4>Express delivery</h4>
+                            <p>SHIP hỏa tốc 1h nhận hàng trong nội thành HCM</p>
+                        </div>
+                        <div class="guarantee-product-item">
+                            <img src="img/24h.png" alt="">
+                            <h3>HỔ TRỢ 24/24</h3>
+                            <h4>Supporting 24/24</h4>
+                            <p>Gọi ngay</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+ 
+    <div class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="trungtamtrogiup.html" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="huongdanmuahang.html" class="footer-item__link">Hướng dẫn mua hàng </a>
+                        </li>
+                    </ul>
+
+                </div>    
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="me.html" class="footer-item__link">Về tôi</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="listsanpham.html" class="footer-item__link">Sản phẩm</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="listphukien.html" class="footer-item__link">Phụ kiện</a>
+                        </li>
+                    </ul>
+                </div>   
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Thông tin liên hệ</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <p class="footer-item__link">
+                                <img  src="img/adress.png"/>
+                                25/49 Sơn kỳ,P.Sơn kỳ,Q.Tân Phú,TP.HCM
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p class="footer-item__link">
+                                <img src="img/phone.png"/>
+                                0374402840 
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p class="footer-item__link">
+                                <img src="img/mail.png"/>
+                                Hothikieuoanh481@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>   
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo dõi</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="https://www.facebook.com/kieuoanh.hothi.77/" class="footer-item__link">
+                                <img src="img/face.png"/>
+                                facebook</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.instagram.com/htkieuoanh28/" class="footer-item__link">
+                                <img src="img/insta.png"/>
+                                Instagram </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.linkedin.com/in/h%E1%BB%93-th%E1%BB%8B-ki%E1%BB%81u-oanh-undefined-a47235265/" class="footer-item__link">
+                                <img src="img/link.png"/>
+                                Linkedin</a>
+                        </li>
+                    </ul>
+
+                </div>   
+                   
+            </div>
+            
+
+        </div>
+        <div class="footer__bottom">
+            <div class="grid">
+                
+                    <p class="footer__text ">@2023-Bản quyền thuộc về Hồ Thị Kiều Oanh</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

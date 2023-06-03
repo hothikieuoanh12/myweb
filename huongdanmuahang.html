@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitietsanpham</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="header">
+        <div class="grid">
+        <div class="header-main">
+            <div class="header__logo hide-on-mobile-tablet">
+                <img  class="header__logo-img" src="img/logo.png" width="150px"/>
+            
+             </div>
+          <div class="header__navbar hide-on-mobile-tablet">
+              <ul class="header__navbar-list ">
+                <li class="header__navbar-item"><a href="index.html">TRANG CHỦ</a></li>
+                <li class="header__navbar-item"><a href="listsanpham.html">SẢN PHẨM</a></li>
+                <li class="header__navbar-item"><a href="listphukien.html">PHỤ KIỆN</a></li>
+                <li class="header__navbar-item"><a href="me.html">VỀ TÔI</a></li>
+              </ul>
+           </div> 
+
+           <label for="nav-mobile-input" class="nav__bars-btn">
+            <img src="img/menu.png" alt="">
+           </label>
+           <input  type="checkbox" hidden name=""class="nav__input" id="nav-mobile-input"></input>
+    
+           <label for="nav-mobile-input" class="nav__overlay">
+            <div class="header__navbar-mobile">
+               <label for="nav-mobile-input" class="nav__mobile-close">
+                <img src="img/close.png" alt="">
+            
+               </label>
+              <ul class="header__navbar-mobile-list ">
+                <li class="header__navbar-mobile-item"><a href="index.html">TRANG CHỦ</a></li>
+                <li class="header__navbar-mobile-item"><a href="listsanpham.html">SẢN PHẨM</a></li>
+                <li class="header__navbar-mobile-item"><a href="listphukien.html">PHỤ KIỆN</a></li>
+                <li class="header__navbar-mobile-item"><a href="me.html">VỀ TÔI</a></li>
+              </ul>
+           </div>
+
+           </label>
+           <div class="header__khoangtrang">
+
+           </div>
+            <div class="header__search ">
+                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                <button class="header__search-btn">
+                    <span class="material-symbols-outlined">
+                        search
+                        </span>
+
+                </button>
+
+
+            </div>
+            <div class="header__cart">
+                <div class="header__cart-dangky"><a href="register.html">
+                    <span class="material-symbols-outlined">
+                    person
+                    </span></a>
+                    
+                </div>
+                <div class="header__cart-gioihang">
+                    <a href="gioihang.html">
+                    <span class="material-symbols-outlined">
+                    shopping_cart
+                    </span></a>
+                </div>
+              
+            </div>
+            
+        </div> 
+    </div>
+        
+    </div>
+
+ </div>
+ <div class="container">
+    <div class="grid">
+        <div class="container1">
+            <div class="grid__row app__sp">
+                <div class="grid__column-10">
+                    <div class="home-product">
+                        <h1 class="tieude">HƯỚNG DẪN MUA HÀNG</h1>
+                        <div class="home-product-instruct">
+                            <h3>1. Mua tại các showroom cửa hàng ShoesVN:</h3>
+                            <p>Khách hàng mua hàng trực tiếp tại cửa hàng trụ sở chính: <b> 25/49 Sơn Kỳ, Phường Sơn Kỳ, Quận Tân Phú, Thành phố Hồ Chí Minh.</b></p>
+                            <p>Ưu đãi tại cửa hàng: Áp dụng tất cả ưu đãi hiện có tại SHOESVN, Gói quà miễn phí, Chuyển hàng tận nhà miễn phí tại thành phố Hồ Chí Minh.</p>
+                            <h3>2. Mua hàng trực tuyến trên website ShoesVN:</h3>
+                            <h4>-Khách hàng thân thiết:</h4>
+                            <p>+Ship thường: Nội thành,ngoại thành freeship</p>
+                            <p>+Ship hỏa tốc:Nội thành,ngoại thành được hổ trợ 30k</p>
+                            <h4>-Khách hàng mới:</h4>
+                            <p>+Ship thường: Nội thành  freeship,,ngoại thành freeship và cọc trước 200k bất ki sản phẩm nào </p>
+                            <p>+Ship hỏa tốc:Nội thành,ngoại thành được hổ trợ 30k</p>
+                            <h4>1. Nhận hàng tại địa chỉ của bạn :</h4>
+                            <b> a/Thanh toán khi nhận hàng :</b>
+                            <p>Shoesvn ship hàng toàn quốc COD - Kiểm tra hàng trước và thanh toán trực tiếp tại nhà.</p>
+                            <b> b/ Chuyển khoản ATM - Internet banking</b>
+                            <p>Áp dụng khách hàng xa khu vực Hồ Chí Minh. Khi lựa chọn hình thức thanh toán chuyển khoản khách hàng sẽ nhận được số tài khoản với ngân hàng tương ứng cùng mã giao dịch. Mã giao dịch được điền vào chú thích khi thanh toán để đơn hàng được xác minh chính xác.</p>
+                            <h4>2. Nhận hàng tại cửa hàng :</h4>
+                            <p>Với phương thức nhận hàng tại cửa hàng khách hàng sẽ được giữ hàng tối đa 6 tiếng tính từ thời gian đặt hàng .Món hàng sẽ được giữ chân. Vui lòng đến SHOESVN trước 18h để thanh toán và nhận hàng. Đơn hàng sẽ tự động hủy sau 6h đặt hàng đối với nhận hàng tại cửa hàng và thanh toán sau khi nhận hàng.</p>
+                        </div>
+
+                        
+
+                        
+
+                    </div>
+
+                </div>
+                <div class="grid__column-2">
+                    <div class="home-new">
+                        <h1 class="tieude">TIN TỨC MỚI</h1>
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/dai-hoc-luat-ha-noi-cong-bo-diem-chuan-hoc-ba-2023-nganh-cao-nhat-vuot-nguong-30-diem-post1537611.tpo" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/300x180/Uploaded/2023/ttf-ztmfxuzt/2023_05_26/collage-2428.png);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Đại học Luật Hà Nội công bố điểm chuẩn học bạ 2023:Ngành cao nhất vượt ngưỡng 30 điểm</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">27/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/ra-quan-chien-dich-thanh-nien-tinh-nguyen-he-2023-noi-thanh-nien-duoc-cong-hien-va-truong-thanh-post1537882.tpo" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/350x210/Uploaded/2023/ttf-ztmfxuzt/2023_05_27/133296443265235592-z4381175981926-f2d37f706c97415545c821491eb0672b-4941.jpg);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">11 chỉ tiêu quan trọng của chiến dịch Thanh niên tình nguyện Hè năm 2023</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">28/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/tung-bung-ngay-hoi-hs-sv-doi-moi-sang-tao-nghien-cuu-khoa-hoc-khoi-nghiep-nam-2023-post1536369.tpo?utm_source=dable" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://images.dable.io/thumbnail/photo-cms-tpo.epicdn.me/300X188/169/6c7f7a85314802949e8e623c8fd6fcd7a47af.webp);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Tưng bừng Ngày hội HS-SV Đổi mới sáng tạo,Nghiên cứu khoa học,Khởi nghiệp năm 2023</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">27/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/duong-len-dinh-olympia-23-nam-sinh-dak-nong-vao-vong-trong-nho-so-diem-nhi-cao-nhat-post1536217.tpo" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/200x120/Uploaded/2023/qqc-lce22/2023_05_21/z4363874131271-62b51d8fded1dfb4deb7717761ae564e-5853.jpg);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Đường Lên Đỉnh Olympia 23: Nam sinh Đắk Nông vào vòng trong nhờ số điểm Nhì cao nhất</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">21/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="grid__column">
+                            <a href="https://thanhnien.vn/truong-dai-hoc-rmit-ra-mat-nganh-cu-nhan-ke-toan-chuan-quoc-te-185230517142817036.htm" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://images2.thanhnien.vn/528068263637045248/2023/5/25/rmit-16850001746541628751486.jpg);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Trường đại học RMIT ra mắt ngành cử nhân Kế Toán chuẩn quốc tê</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">27/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>>
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/700x420/Uploaded/2023/ttf-ztmfxuzt/2023_05_27/133296481987054704-z4381083832756-6bd442588b08574f89f3785027383fe0-5189.jpg);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Ra quân chiến dịch Thanh niên tình nguyện Hè 2023:Nơi thanh niên được cống hiến và trưởng thành</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">27/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/ngay-thi-dau-tien-vao-lop-10-truong-pho-thong-nang-khieu-si-tu-tho-phao-vi-de-vua-suc-post1537712.tpo" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/350x210/Uploaded/2023/qqc-lce22/2023_05_26/thiet-ke-chua-co-ten-6-5753.png);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Ngày thi đầu tiên vào lớp 10 trường phổ thông Năng khiếu :Sĩ tử thở phào vì đề với sức </h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">25/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="grid__column">
+                            <a href="https://hoahoctro.tienphong.vn/mon-kem-dat-ky-luc-guinness-dat-nhat-the-gioi-khien-ai-cung-muon-nem-thu-post1537776.tpo" class="home-new-item">
+                                <div class="home-new-item__main">
+                                    <div class="home-new-item__img" style="background-image: url(https://photo-cms-tpo.epicdn.me/300x180/Uploaded/2023/vvh-buimsbhfiq/2023_05_27/thiet-ke-chua-co-ten-1-8488.png);"></div>
+                                    <div class="home-new-item__nd">
+                                        <h5 class="home-new-item__name">Món kem đạt kỷ lục Guinness đắt nhất thế giới khiến ai cũng muốn nếm thử</h5>
+                                    <div class="home-new-item__time">
+                                        <img  src="img/alarm.png"/>
+                                        <div class="home-new-item__time-date">22/05/2023</div>
+                                        
+                                        
+                                    </div>
+                                    </div>
+                                    
+            
+                                </div>
+                            </a>
+
+                        </div>
+                        
+
+
+
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+        </div>
+        <div class="container3">
+            <div class="guarantee-product">
+            <div class="grid-row">
+                <div class="guarantee-product-list">
+                    <div class="guarantee-product-item">
+                        <img src="img/camket.png"/>
+                        <h3>CAM KẾT CHÍNH HÃNG</h3>
+                        <h4>100% Authentic</h4>
+                        <p>Cam kết sản phẩm chính hãng tư Châu Âu ,Châu Mỹ</p>
+                    </div>
+                    <div class="guarantee-product-item">
+                        <img src="img/vanchuyen.png" alt="">
+                        <h3>GIAO HÀNG HỎA TỐC</h3>
+                        <h4>Express delivery</h4>
+                        <p>SHIP hỏa tốc 1h nhận hàng trong nội thành HCM</p>
+                    </div>
+                    <div class="guarantee-product-item">
+                        <img src="img/24h.png" alt="">
+                        <h3>HỔ TRỢ 24/24</h3>
+                        <h4>Supporting 24/24</h4>
+                        <p>Gọi ngay</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="trungtamtrogiup.html" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="huongdanmuahang.html" class="footer-item__link">Hướng dẫn mua hàng </a>
+                        </li>
+                    </ul>
+
+                </div>    
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="me.html" class="footer-item__link">Về tôi</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="listsanpham.html" class="footer-item__link">Sản phẩm</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="listphukien.html" class="footer-item__link">Phụ kiện</a>
+                        </li>
+                    </ul>
+                </div>   
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Thông tin liên hệ</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <p class="footer-item__link">
+                                <img  src="img/adress.png"/>
+                                25/49 Sơn kỳ,P.Sơn kỳ,Q.Tân Phú,TP.HCM
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p class="footer-item__link">
+                                <img src="img/phone.png"/>
+                                0374402840 
+                            </p>
+                        </li>
+                        <li class="footer-item">
+                            <p class="footer-item__link">
+                                <img src="img/mail.png"/>
+                                Hothikieuoanh481@gmail.com
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>   
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo dõi</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="https://www.facebook.com/kieuoanh.hothi.77/" class="footer-item__link">
+                                <img src="img/face.png"/>
+                                facebook</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.instagram.com/htkieuoanh28/" class="footer-item__link">
+                                <img src="img/insta.png"/>
+                                Instagram </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.linkedin.com/in/h%E1%BB%93-th%E1%BB%8B-ki%E1%BB%81u-oanh-undefined-a47235265/" class="footer-item__link">
+                                <img src="img/link.png"/>
+                                Linkedin</a>
+                        </li>
+                    </ul>
+
+                </div>   
+                   
+            </div>
+            
+
+        </div>
+        <div class="footer__bottom">
+            <div class="grid">
+                
+                    <p class="footer__text ">@2023-Bản quyền thuộc về Hồ Thị Kiều Oanh</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
